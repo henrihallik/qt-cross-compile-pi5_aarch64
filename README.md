@@ -59,18 +59,19 @@ Connect to your Pi with ssh and download the zip file:
 >wget https://www.interelectronix.com/sites/default/files/scripts/qt-cross-compile-rpi4.zip<br>
 >unzip qt-cross-compile-rpi4.zip<br>
 >cd qt-cross-compile-rpi4<br>
+
 You can also download the zip file via browser from here.<br>
 
 Make the script qt-cross-compile-script-pi4.sh executable and execute it:
 
-sudo chmod +x qt-cross-compile-script-pi4.sh
-sudo ./qt-cross-compile-script-pi4.sh
+sudo chmod +x qt-cross-compile-script-pi4.sh<br>
+sudo ./qt-cross-compile-script-pi4.sh<br>
 After a while all needed packages are installed, the needed directories are created and the symlinks are correctly set.
 
-IMPORTANT
+### IMPORTANT
 Make sure your Raspberry Pi and this Host machine (where you cross-compiling) MUST be on the SAME Network.
 
-STEPS/SETTINGS FOR HOST MACHINE (LINUX UBUNTU)
+### STEPS/SETTINGS FOR HOST MACHINE (LINUX UBUNTU)
 For testing, we used a virtual machine (vmware) with a clean Ubuntu 20.04 LTS version.
 
 1. DOWNLOAD ZIP FILE
