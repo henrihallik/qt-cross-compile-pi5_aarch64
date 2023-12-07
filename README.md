@@ -35,7 +35,7 @@ If the drive (or device) selected is different from the SD card then the other s
 ### 1.2 SET UP NETWORK
 Now the you have your Raspberry Pi up and Running, its time to connect it your network with one of following ways:
 <br>
-If you have Monitor: Connect it to your raspberry pi along with a keyboard and mouse to navigate, and follow this guide. https://www.raspberrypi.org/documentation/configuration/wireless/desktop.md<br>
+If you have Monitor: Connect it to your raspberry pi along with a keyboard and mouse to navigate, and follow this guide https://www.raspberrypi.org/documentation/configuration/wireless/desktop.md<br>
 If you don't have Monitor: Follow this guide https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md
 ## 2. SET UP SSH
 If you have Monitor: On the Raspberry Pi terminal, type: sudo raspi-config and menu should pop up on your terminal. To enable SSH, go to: Interfacing Options -> SSH -> Yes, and Click OK to enable it. Choose Finish finally and exit.
