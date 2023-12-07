@@ -103,8 +103,9 @@ download symlinker and set symlinks<br>
 configure Qt build
 make and make install Qt build<br>
 rsync Qt binaries to raspberry<br>
-FINAL STEP FOR TARGET MACHINE (RASPBERRY PI)<br>
-UPDATE LINKER ON RASPBERRY PI<br>
+
+## FINAL STEP FOR TARGET MACHINE (RASPBERRY PI)
+### UPDATE LINKER ON RASPBERRY PI
 Enter the following command to update the device letting the linker to find the new QT binary files:<br>
 
 >echo /usr/local/qt5.15/lib | sudo tee /etc/ld.so.conf.d/qt5.15.conf<br>
