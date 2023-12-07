@@ -56,11 +56,11 @@ Connect to your Pi with ssh and download the zip file:
 
 >ssh pi@192.168.1.47
 
->wget https://www.interelectronix.com/sites/default/files/scripts/qt-cross-compile-rpi4.zip<br>
->unzip qt-cross-compile-rpi4.zip<br>
->cd qt-cross-compile-rpi4<br>
+>wget https://github.com/henrihallik/qt-cross-compile-pi5_aarch64/archive/refs/heads/main.zip<br>
+>unzip qt-cross-compile-pi5_aarch64<br>
+>cd qt-cross-compile-pi5_aarch64<br>
 
-You can also download the zip file via browser from here.<br>
+You can also download the zip file via browser from here https://github.com/henrihallik/qt-cross-compile-pi5_aarch64/archive/refs/heads/main.zip.<br>
 
 Make the script qt-cross-compile-script-pi4.sh executable and execute it:
 
@@ -73,7 +73,7 @@ After a while all needed packages are installed, the needed directories are crea
 Make sure your Raspberry Pi and this Host machine (where you cross-compiling) MUST be on the SAME Network.
 
 ## STEPS/SETTINGS FOR HOST MACHINE (LINUX UBUNTU)
-For testing, we used a virtual machine (vmware) with a clean Ubuntu 20.04 LTS version.
+For testing, we used a PC with Ubuntu 22.04.1 LTS version.
 
 ### 1. DOWNLOAD ZIP FILE
 >wget https://github.com/henrihallik/qt-cross-compile-pi5_aarch64/archive/refs/heads/main.zip<br>
