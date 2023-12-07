@@ -10,7 +10,7 @@ Host: Any Linux machine (Ubuntu 22.04.1 LTS Tested)<br>
 Target: Raspberry Pi 5 Linux 64-bit OS (Raspbian Bookworm Lite tested)<br>
 
 ### NOTE
-This is based on https://www.interelectronix.com/qt-cross-compile-setup-scripts-raspberry-pi-4.html scripts. The main differences are downloading 64-bit cross-compiler instead of 32-bit and mkspec for 64-bit Pi4 taken from Qt 6.6.1 source code is copied to the unpacked Qt 5.15.8 source code into the folder ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/mkspec/devices/linux-rasp-pi4-aarch64. In the background the cross compile toolchains for Raspberry Pi from abhiTronix are used.
+This is based on https://www.interelectronix.com/qt-cross-compile-setup-scripts-raspberry-pi-4.html scripts. The main differences are downloading 64-bit cross-compiler instead of 32-bit and mkspec for 64-bit Pi4 taken from Qt 6.6.1 source code is copied to the unpacked Qt 5.15.8 source code into the folder ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/mkspec/devices/linux-rasp-pi4-aarch64. In the background the cross compile toolchains for Raspberry Pi from <a href="https://github.com/abhiTronix/raspberry-pi-cross-compilers">abhiTronix</a> are used.
 
 ### OTHERS
 Storage and Time Requirements: The build directory takes around ~10GB space and about 2-5 hours to complete (based on dependencies & Host Machine Specifications).
