@@ -59,7 +59,7 @@ Connect to your Pi with ssh and download the zip file:
 >wget https://www.interelectronix.com/sites/default/files/scripts/qt-cross-compile-rpi4.zip<br>
 >unzip qt-cross-compile-rpi4.zip<br>
 >cd qt-cross-compile-rpi4<br>
->You can also download the zip file via browser from here.<br>
+You can also download the zip file via browser from here.<br>
 
 Make the script qt-cross-compile-script-pi4.sh executable and execute it:
 
