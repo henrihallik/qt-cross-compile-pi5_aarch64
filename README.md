@@ -10,7 +10,7 @@ Host: Any Linux machine (Ubuntu 22.04.1 LTS Tested)<br>
 Target: Raspberry Pi 5 Linux 64-bit OS (Raspbian Bookworm Lite tested)<br>
 
 ### NOTE
-This is based on https://www.interelectronix.com/qt-cross-compile-setup-scripts-raspberry-pi-4.html scripts. The main difference is downloading 64-bit cross-compiler instead of 32-bit and mkspec for 64-bit Pi4 taken from Qt 6.6.1 source code is copied to the unpacked Qt 5.15.8 source code into the folder ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/mkspec/devices/linux-rasp-pi4-aarch64. In the background the cross compile toolchains for Raspberry Pi from abhiTronix are used.
+This is based on https://www.interelectronix.com/qt-cross-compile-setup-scripts-raspberry-pi-4.html scripts. The main differences are downloading 64-bit cross-compiler instead of 32-bit and mkspec for 64-bit Pi4 taken from Qt 6.6.1 source code is copied to the unpacked Qt 5.15.8 source code into the folder ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/mkspec/devices/linux-rasp-pi4-aarch64. In the background the cross compile toolchains for Raspberry Pi from abhiTronix are used.
 
 ### OTHERS
 Storage and Time Requirements: The build directory takes around ~10GB space and about 2-5 hours to complete (based on dependencies & Host Machine Specifications).
@@ -32,22 +32,22 @@ Insert the SD card into the laptop/pc and run the image writer. Once open, brows
 If the drive (or device) selected is different from the SD card then the other selected drive will become corrupted. SO BE CAREFUL!
 <br>
 - Once the write is complete, eject the SD card and insert it into the Raspberry Pi and turn it on. It should start booting up. - Please remember that after booting the Pi, there might be situations when the user credentials like the "username" and password will be asked. Raspberry Pi comes with a default username `pi` and password `raspberry` and so use it whenever it is being asked.
-1.2 SET UP NETWORK
+### 1.2 SET UP NETWORK
 Now the you have your Raspberry Pi up and Running, its time to connect it your network with one of following ways:
-
-If you have Monitor: Connect it to your raspberry pi along with a keyboard and mouse to navigate, and follow this guide.
-If you don't have Monitor: Follow this guide
-2. SET UP SSH
+<br>
+If you have Monitor: Connect it to your raspberry pi along with a keyboard and mouse to navigate, and follow this guide. https://www.raspberrypi.org/documentation/configuration/wireless/desktop.md<br>
+If you don't have Monitor: Follow this guide https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md
+## 2. SET UP SSH
 If you have Monitor: On the Raspberry Pi terminal, type: sudo raspi-config and menu should pop up on your terminal. To enable SSH, go to: Interfacing Options -> SSH -> Yes, and Click OK to enable it. Choose Finish finally and exit.
-
+<br>
 If you don't have Monitor: After setting up the network, if you don't have monitor or you operating it remotely. Then, enable SSH by just taking out your SD card, and hook it your computer, and simply create an empty file called ssh in the /boot/parition path inside SD card. Now insert back SD card into the Raspberry Pi.
 
-3. OPEN TERMINAL
+## 3. OPEN TERMINAL
 From another Laptop/PC using SSH: To connect to your Pi from a different computer, copy and paste the following command into the terminal window but replace 192.160.1.47 with the IP address of the Raspberry Pi.
-ssh pi@192.168.1.47 
+>ssh pi@192.168.1.47 
 It will ask for password, and if not changed, it is default (raspberry), and so use it whenever it is being asked.
 
-NOTE
+### NOTE
 It is possible to configure your Raspberry Pi to allow access from another computer without needing to provide a password each time you connect. For more details, see here.
 
 4. GET SCRIPTS
