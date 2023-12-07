@@ -44,7 +44,8 @@ If you don't have Monitor: After setting up the network, if you don't have monit
 
 ## 3. OPEN TERMINAL
 From another Laptop/PC using SSH: To connect to your Pi from a different computer, copy and paste the following command into the terminal window but replace 192.160.1.47 with the IP address of the Raspberry Pi.
->ssh pi@192.168.1.47<br> 
+>ssh pi@192.168.1.47<br>
+
 It will ask for password, and if not changed, it is default (raspberry), and so use it whenever it is being asked.
 
 ### NOTE
