@@ -77,7 +77,7 @@ For testing, we used a PC with Ubuntu 22.04.1 LTS version.
 
 ### 1. DOWNLOAD ZIP FILE
 >wget https://github.com/henrihallik/qt-cross-compile-pi5_aarch64/archive/refs/heads/main.zip<br>
->unzip qt-cross-compile-pi5_aarch64.zip<br>
+>unzip main.zip<br>
 >cd qt-cross-compile-pi5_aarch64<br>
 
 You can also download the zip file via browser from here. https://github.com/henrihallik/qt-cross-compile-pi5_aarch64/archive/refs/heads/main.zip
