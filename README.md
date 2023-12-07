@@ -10,27 +10,27 @@ Host: Any Linux machine (Ubuntu 22.04.1 LTS Tested)<br>
 Target: Raspberry Pi 5 Linux 64-bit OS (Raspbian Bookworm Lite tested)<br>
 
 ### NOTE
-In the background the cross compile toolchains for Raspberry Pi from abhiTronix are used.
+This is based on https://www.interelectronix.com/qt-cross-compile-setup-scripts-raspberry-pi-4.html scripts. The main difference is downloading 64-bit cross-compiler instead of 32-bit and mkspec for 64-bit Pi4 taken from Qt 6.6.1 source code is copied to the unpacked Qt 5.15.8 source code into the folder ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/mkspec/devices/linux-rasp-pi4-aarch64. In the background the cross compile toolchains for Raspberry Pi from abhiTronix are used.
 
 ### OTHERS
 Storage and Time Requirements: The build directory takes around ~10GB space and about 2-5 hours to complete (based on dependencies & Host Machine Specifications).
 Networking: Your Target Machine (Raspberry Pi) and Host Machine (where you cross-compiling) both MUST have Internet Access, and MUST be on SAME Network to follow these instructions.
 
-STEPS/SETTINGS FOR TARGET MACHINE (RASPBERRY PI)
-1. START FROM SCRATCH (OPTIONAL)
-IMPORTANT
+## STEPS/SETTINGS FOR TARGET MACHINE (RASPBERRY PI)
+### 1. START FROM SCRATCH (OPTIONAL)
+#### IMPORTANT
 If you just brought a new Raspberry Pi or wanted to start from scratch just follow along. Otherwise, if you already has your Raspberry Pi setup, running, and Network Ready, then just skip to step 2.
 
-NOTE
+#### NOTE
 This section assume you have atleast 10GB SDcard for installing Raspbian (Stretch/Buster/Bullseye) OS and a Laptop/PC for uploading it.
 
-1.1. DOWNLOAD SOFTWARES & PREPARE THE SD CARD
+### 1.1. DOWNLOAD SOFTWARES & PREPARE THE SD CARD
 Download the latest version of Raspbian (Bullseye) from here on your laptop/pc.
 You will be needing an image writer to write the downloaded OS into the SD card (micro SD card in our case). You can use Balena Etcher.
 Insert the SD card into the laptop/pc and run the image writer. Once open, browse and select the downloaded Raspbian image file. Select the correct device, that is the drive representing the SD card.
-NOTE
+#### NOTE
 If the drive (or device) selected is different from the SD card then the other selected drive will become corrupted. SO BE CAREFUL!
-
+<br>
 - Once the write is complete, eject the SD card and insert it into the Raspberry Pi and turn it on. It should start booting up. - Please remember that after booting the Pi, there might be situations when the user credentials like the "username" and password will be asked. Raspberry Pi comes with a default username `pi` and password `raspberry` and so use it whenever it is being asked.
 1.2 SET UP NETWORK
 Now the you have your Raspberry Pi up and Running, its time to connect it your network with one of following ways:
