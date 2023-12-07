@@ -7,7 +7,7 @@ Target [Raspberry Pi 4&5]: Raspberry Pi 5 or Raspberry Pi 4
 
 ### SOFTWARE
 Host: Any Linux machine (Ubuntu 22.04.1 LTS Tested)<br>
-Target: Raspberry Pi 4&5 Linux 64-bit OS (Raspberry Pi OS Bookworm Lite tested)<br>
+Target: Raspberry Pi 4&5 Linux 64-bit OS (Raspberry Pi OS Bookworm Lite/Desktop tested)<br>
 
 ### NOTE
 This is based on https://www.interelectronix.com/qt-cross-compile-setup-scripts-raspberry-pi-4.html scripts. The main differences are downloading 64-bit cross-compiler instead of 32-bit and mkspecs for 64-bit Pi4 taken from Qt 6.6.1 source code is copied to the unpacked Qt 5.15.8 source code into the folder ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/mkspecs/devices/linux-rasp-pi4-aarch64. In the background the cross compile toolchains for Raspberry Pi from <a href="https://github.com/abhiTronix/raspberry-pi-cross-compilers">abhiTronix</a> are used.
@@ -22,12 +22,18 @@ Networking: Your Target Machine (Raspberry Pi) and Host Machine (where you cross
 If you just brought a new Raspberry Pi or wanted to start from scratch just follow along. Otherwise, if you already has your Raspberry Pi setup, running, and Network Ready, then just skip to step 2.
 
 #### NOTE
-This section assume you have atleast 10GB SDcard for installing Raspbian (Stretch/Buster/Bullseye) OS and a Laptop/PC for uploading it.
+This section assume you have at least 10GB SDcard or USB stick for installing Raspberry Pi Bookworm 64-bit OS and a Laptop/PC for uploading it.
 
-### 1.1. DOWNLOAD SOFTWARES & PREPARE THE SD CARD
-Download the latest version of Raspbian (Bullseye) from here on your laptop/pc.
-You will be needing an image writer to write the downloaded OS into the SD card (micro SD card in our case). You can use Balena Etcher.
-Insert the SD card into the laptop/pc and run the image writer. Once open, browse and select the downloaded Raspbian image file. Select the correct device, that is the drive representing the SD card.
+### 1.1. DOWNLOAD SOFTWARES & PREPARE THE USB or SD CARD
+Install rpi-imager<br>
+>sudo apt install rpi-imager<br>
+
+Select 64-bit Raspberry Pi OS Bookworm Lite/Desktop. Adjust settings form the gear button. For target storage select USB stick or sd card. I used USB since its much faster than sdcard. <br>
+
+if u dont want to use rpi-imager then:<br>
+Download the latest version of Raspberry Pi 64-bit OS from <a href="https://www.raspberrypi.org/software/operating-systems/">here</a> on your laptop/pc.
+You will be needing an image writer to write the downloaded OS into the USB/SD card (micro SD card in our case). You can use Balena Etcher.
+Insert the SUB/SD card into the laptop/pc and run the image writer. Once open, browse and select the downloaded Raspbian image file. Select the correct device, that is the drive representing the USB/SD card.
 #### NOTE
 If the drive (or device) selected is different from the SD card then the other selected drive will become corrupted. SO BE CAREFUL!
 <br>
