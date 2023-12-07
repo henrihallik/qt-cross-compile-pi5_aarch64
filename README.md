@@ -104,6 +104,12 @@ configure Qt build
 make and make install Qt build<br>
 rsync Qt binaries to raspberry<br>
 
+### NOTE
+ERROR: Feature 'kms' was enabled, but the pre-condition 'libs.drm' failed. The ./configure command in the host script tried to find drm.h from /usr/include but such file did not exist in that folder so one must look where the libdrm headers are actually located. In my case i had to add to the ./configure command in the host script: <br>
+>-I$HOME/rpi-qt/sysroot/usr/include/libdrm </br>
+
+Also if the libdrm.so file is not located in the ~/rpi-qt/sysroot/usr/lib/aarch64-linux-gnu then might need to specify that also with -L tag in the configure script
+
 ## FINAL STEP FOR TARGET MACHINE (RASPBERRY PI)
 ### UPDATE LINKER ON RASPBERRY PI
 Enter the following command to update the device letting the linker to find the new QT binary files:<br>
