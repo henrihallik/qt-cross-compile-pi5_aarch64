@@ -2,17 +2,17 @@
  
 ## PREREQUITES  
 ### HARDWARE
-Host [PC/Laptop]: Any x86/x86_64 AMD/Intel machine
+Host [PC/Laptop]: Any x86/x86_64 AMD/Intel machine<br>
 Target [Raspberry Pi 4&5]: Raspberry Pi 5 or Raspberry Pi 4  
 
-SOFTWARE
-Host: Any Linux machine (Ubuntu 22.04.1 LTS Tested)
-Target: Raspberry Pi 5 Linux 64-bit OS (Raspbian Bookworm Lite tested)
+### SOFTWARE
+Host: Any Linux machine (Ubuntu 22.04.1 LTS Tested)<br>
+Target: Raspberry Pi 5 Linux 64-bit OS (Raspbian Bookworm Lite tested)<br>
 
-NOTE
+### NOTE
 In the background the cross compile toolchains for Raspberry Pi from abhiTronix are used.
 
-OTHERS
+### OTHERS
 Storage and Time Requirements: The build directory takes around ~10GB space and about 2-5 hours to complete (based on dependencies & Host Machine Specifications).
 Networking: Your Target Machine (Raspberry Pi) and Host Machine (where you cross-compiling) both MUST have Internet Access, and MUST be on SAME Network to follow these instructions.
 
