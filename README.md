@@ -57,7 +57,7 @@ Connect to your Pi with ssh and download the zip file:
 >ssh pi@192.168.1.47
 
 >wget https://github.com/henrihallik/qt-cross-compile-pi5_aarch64/archive/refs/heads/main.zip<br>
->unzip qt-cross-compile-pi5_aarch64<br>
+>unzip main.zip<br>
 >cd qt-cross-compile-pi5_aarch64<br>
 
 You can also download the zip file via browser from here https://github.com/henrihallik/qt-cross-compile-pi5_aarch64/archive/refs/heads/main.zip.<br>
