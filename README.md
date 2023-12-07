@@ -44,21 +44,21 @@ If you don't have Monitor: After setting up the network, if you don't have monit
 
 ## 3. OPEN TERMINAL
 From another Laptop/PC using SSH: To connect to your Pi from a different computer, copy and paste the following command into the terminal window but replace 192.160.1.47 with the IP address of the Raspberry Pi.
->ssh pi@192.168.1.47 
+>ssh pi@192.168.1.47<br> 
 It will ask for password, and if not changed, it is default (raspberry), and so use it whenever it is being asked.
 
 ### NOTE
 It is possible to configure your Raspberry Pi to allow access from another computer without needing to provide a password each time you connect. For more details, see here.
 
-4. GET SCRIPTS
+## 4. GET SCRIPTS
 Connect to your Pi with ssh and download the zip file:
 
-ssh pi@192.168.1.47
+>ssh pi@192.168.1.47
 
-wget https://www.interelectronix.com/sites/default/files/scripts/qt-cross-compile-rpi4.zip
-unzip qt-cross-compile-rpi4.zip
-cd qt-cross-compile-rpi4
-You can also download the zip file via browser from here.
+>wget https://www.interelectronix.com/sites/default/files/scripts/qt-cross-compile-rpi4.zip
+>unzip qt-cross-compile-rpi4.zip
+>cd qt-cross-compile-rpi4
+>You can also download the zip file via browser from here.
 
 Make the script qt-cross-compile-script-pi4.sh executable and execute it:
 
