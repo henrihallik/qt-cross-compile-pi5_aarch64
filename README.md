@@ -1,9 +1,9 @@
 #QT cross compile setup scripts for 64-bit Rasperry Pi 4&5
  
-PREREQUITES  
-HARDWARE
-Host [PC/Laptop]: Any x86/x86_64 AMD/Intel machine
-Target [Raspberry Pi 4&5]: Raspberry Pi 5 or Raspberry Pi 4
+##PREREQUITES  
+###HARDWARE
+Host [PC/Laptop]: Any x86/x86_64 AMD/Intel machine  
+Target [Raspberry Pi 4&5]: Raspberry Pi 5 or Raspberry Pi 4  
 
 SOFTWARE
 Host: Any Linux machine (Ubuntu 22.04.1 LTS Tested)
