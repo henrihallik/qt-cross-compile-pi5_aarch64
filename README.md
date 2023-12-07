@@ -1,15 +1,14 @@
-# qt-cross-compile-pi5_aarch64
- QT cross compile setup scripts for 64-bit Rasperry Pi 4&5
+#QT cross compile setup scripts for 64-bit Rasperry Pi 4&5
  
 <p>
-PREREQUITES
+PREREQUITES  
 HARDWARE
 Host [PC/Laptop]: Any x86/x86_64 AMD/Intel machine
-Target [Raspberry Pi 4]: Raspberry Pi 4
+Target [Raspberry Pi 4&5]: Raspberry Pi 5 or Raspberry Pi 4
 
 SOFTWARE
 Host: Any Linux machine (Ubuntu 22.04.1 LTS Tested)
-Target: Raspberry Pi 5 Linux 62-bit OS (Raspbian Bookworm Lite tested)
+Target: Raspberry Pi 5 Linux 64-bit OS (Raspbian Bookworm Lite tested)
 
 NOTE
 In the background the cross compile toolchains for Raspberry Pi from abhiTronix are used.
