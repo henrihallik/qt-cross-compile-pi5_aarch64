@@ -1,6 +1,5 @@
 #QT cross compile setup scripts for 64-bit Rasperry Pi 4&5
  
-<p>
 PREREQUITES  
 HARDWARE
 Host [PC/Laptop]: Any x86/x86_64 AMD/Intel machine
@@ -106,4 +105,3 @@ Enter the following command to update the device letting the linker to find the 
 echo /usr/local/qt5.15/lib | sudo tee /etc/ld.so.conf.d/qt5.15.conf
 sudo ldconfig
 
-</p>
