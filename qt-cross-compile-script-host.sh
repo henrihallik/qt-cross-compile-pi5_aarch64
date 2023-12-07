@@ -95,7 +95,7 @@ cecho "YELLOW" "Patching Qt source"
 #uncomment this if for 64-bit cross-compilation
 if [ ! -d ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/mkspecs/devices/linux-rasp-pi4-aarch64 ]
 then
-    sudo cp linux-rasp-pi4-aarch64 ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/mkspecs/devices/linux-rasp-pi4-aarch64
+    sudo cp -r linux-rasp-pi4-aarch64 ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/mkspecs/devices/linux-rasp-pi4-aarch64
 fi
 sed -i -e 's/\"main\"\: \"vc_dispmanx_display_open(0)\;\"/\"main\"\: \[\"vc_dispmanx_display_open(0)\;\"\, \"EGL_DISPMANX_WINDOW_T \*eglWindow \= new EGL_DISPMANX_WINDOW_T\;\"\]/g' ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/src/gui/configure.json
 echo
@@ -156,7 +156,7 @@ cd ~/rpi-qt/build
 #CROSS_COMPILER_LOCATION="$HOME"/rpi-qt/tools/cross-pi-gcc-*
 #../qt-everywhere-src-5.15.8/configure -release -opengl es2 -eglfs -device linux-rasp-pi4-v3d-g++ -device-option CROSS_COMPILE=$(echo $CROSS_COMPILER_LOCATION)/bin/arm-linux-gnueabihf- -sysroot ~/rpi-qt/sysroot/ -prefix /usr/local/qt5.15 -extprefix ~/rpi-qt/qt5.15 -#opensource -confirm-license -skip qtscript -skip qtwayland -skip qtwebengine -nomake tests -make libs -pkg-config -no-use-gold-linker -v -recheck -L$HOME/rpi-qt/sysroot/usr/lib/arm-linux-gnueabihf -I$HOME/rpi-qt/sysroot/usr/include/arm-linux-gnueabihf
 CROSS_COMPILER_LOCATION="$HOME"/rpi-qt/tools/cross-pi-gcc-*
-../qt-everywhere-src-5.15.8/configure -release -opengl es2 -eglfs -device linux-rasp-pi4-aarch64 -device-option CROSS_COMPILE=$(echo $CROSS_COMPILER_LOCATION)/bin/aarch64-linux-gnu- -sysroot ~/rpi-qt/sysroot/ -prefix /usr/local/qt5.15 -extprefix ~/rpi-qt/qt5.15 -opensource -confirm-license -skip qtscript -skip qtwayland -skip qtwebengine -nomake tests -make libs -pkg-config -no-use-gold-linker -v -recheck -L$HOME/rpi-qt/sysroot/usr/lib/aarch64-linux-gnu -I$HOME/rpi-qt/sysroot/usr/include/aarch64-linux-gnu -kms
+../qt-everywhere-src-5.15.8/configure -release -opengl es2 -eglfs -device linux-rasp-pi4-aarch64 -device-option CROSS_COMPILE=$(echo $CROSS_COMPILER_LOCATION)/bin/aarch64-linux-gnu- -sysroot ~/rpi-qt/sysroot/ -prefix /usr/local/qt5.15 -extprefix ~/rpi-qt/qt5.15 -opensource -confirm-license -skip qtscript -skip qtwayland -skip qtwebengine -nomake tests -make libs -pkg-config -no-use-gold-linker -v -recheck -L$HOME/rpi-qt/sysroot/usr/lib/aarch64-linux-gnu -I$HOME/rpi-qt/sysroot/usr/include/aarch64-linux-gnu -I$HOME/rpi-qt/sysroot/usr/include/libdrm -kms
 cecho "GREEN" "Configured Qt build."
 
 # Build Qt
