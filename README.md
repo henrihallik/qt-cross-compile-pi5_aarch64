@@ -64,46 +64,52 @@ You can also download the zip file via browser from here.<br>
 
 Make the script qt-cross-compile-script-pi4.sh executable and execute it:
 
-sudo chmod +x qt-cross-compile-script-pi4.sh<br>
-sudo ./qt-cross-compile-script-pi4.sh<br>
+>sudo chmod +x qt-cross-compile-script-pi4.sh<br>
+>sudo ./qt-cross-compile-script-pi4.sh<br>
+
 After a while all needed packages are installed, the needed directories are created and the symlinks are correctly set.
 
 ### IMPORTANT
 Make sure your Raspberry Pi and this Host machine (where you cross-compiling) MUST be on the SAME Network.
 
-### STEPS/SETTINGS FOR HOST MACHINE (LINUX UBUNTU)
+## STEPS/SETTINGS FOR HOST MACHINE (LINUX UBUNTU)
 For testing, we used a virtual machine (vmware) with a clean Ubuntu 20.04 LTS version.
 
-1. DOWNLOAD ZIP FILE
-wget https://www.interelectronix.com/sites/default/files/scripts/qt-cross-compile-rpi4.zip
-unzip qt-cross-compile-rpi4.zip
-cd qt-cross-compile-rpi4
-You can also download the zip file via browser from here.
+### 1. DOWNLOAD ZIP FILE
+>wget https://github.com/henrihallik/qt-cross-compile-pi5_aarch64/archive/refs/heads/main.zip<br>
+>unzip qt-cross-compile-pi5_aarch64.zip<br>
+>cd qt-cross-compile-pi5_aarch64<br>
 
-2. MAKE THE SCRIPT QT-CROSS-COMPILE-SCRIPT-PI4.SH EXECUTABLE AND EXECUTE IT
-chmod +x qt-cross-compile-script-host.sh
-3. CHANGE VARIABLES IN THE SCRIPT
+You can also download the zip file via browser from here. https://github.com/henrihallik/qt-cross-compile-pi5_aarch64/archive/refs/heads/main.zip
+
+### 2. MAKE THE SCRIPT QT-CROSS-COMPILE-SCRIPT-PI4.SH EXECUTABLE AND EXECUTE IT
+>chmod +x qt-cross-compile-script-host.sh
+### 3. CHANGE VARIABLES IN THE SCRIPT
 You need to change the ip address (raspberry_ip) of your raspberry pi in the script and if you changed the user (raspberry_user) and password (raspberry_pwd) of the raspberry.
 
-nano qt-cross-compile-script-host.sh
-4. EXECUTE THE SCRIPT
-sudo ./qt-cross-compile-script-host.sh
-The script performs the following actions:
+>nano qt-cross-compile-script-host.sh
+### 4. EXECUTE THE SCRIPT
+>sudo ./qt-cross-compile-script-host.sh<br>
 
-install all needed packages
-create needed directories (~/rpi-qt)
-download and extract Qt sources
-patch Qt sources
-download and extract cross compiler
-rsync files from raspberry pi
-download symlinker and set symlinks
+The script performs the following actions:<br>
+
+install all needed packages<br>
+create needed directories (~/rpi-qt)<br>
+download and extract Qt sources<br>
+patch Qt sources<br>
+download and extract cross compiler<br>
+rsync files from raspberry pi<br>
+download symlinker and set symlinks<br>
 configure Qt build
-make and make install Qt build
-rsync Qt binaries to raspberry
-FINAL STEP FOR TARGET MACHINE (RASPBERRY PI)
-UPDATE LINKER ON RASPBERRY PI
-Enter the following command to update the device letting the linker to find the new QT binary files:
+make and make install Qt build<br>
+rsync Qt binaries to raspberry<br>
+FINAL STEP FOR TARGET MACHINE (RASPBERRY PI)<br>
+UPDATE LINKER ON RASPBERRY PI<br>
+Enter the following command to update the device letting the linker to find the new QT binary files:<br>
 
-echo /usr/local/qt5.15/lib | sudo tee /etc/ld.so.conf.d/qt5.15.conf
-sudo ldconfig
+>echo /usr/local/qt5.15/lib | sudo tee /etc/ld.so.conf.d/qt5.15.conf<br>
+>sudo ldconfig<br>
+
+## CONFIGURE QT CREATOR FOR CROSS COMPILING
+Read the blog Configuring <a href="https://www.interelectronix.com/configuring-qt-creator-ubuntu-20-lts-cross-compilation.html">Qt-Creator on Ubuntu 20 Lts for cross-compilation</a> for including the compiled binaries (folder ~/rpi-qt/qt5.15) in Qt Creator. 
 
