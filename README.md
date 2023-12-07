@@ -30,7 +30,8 @@ Install rpi-imager<br>
 
 Select 64-bit Raspberry Pi OS Bookworm Lite/Desktop. Adjust settings form the gear button. For target storage select USB stick or sd card. I used USB since its much faster than sdcard. <br>
 
-if u dont want to use rpi-imager then:<br>
+If u dont want to use rpi-imager then:<br>
+
 Download the latest version of Raspberry Pi 64-bit OS from <a href="https://www.raspberrypi.org/software/operating-systems/">here</a> on your laptop/pc.
 You will be needing an image writer to write the downloaded OS into the USB/SD card (micro SD card in our case). You can use Balena Etcher.
 Insert the SUB/SD card into the laptop/pc and run the image writer. Once open, browse and select the downloaded Raspbian image file. Select the correct device, that is the drive representing the USB/SD card.
