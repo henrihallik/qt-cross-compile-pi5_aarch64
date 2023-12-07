@@ -26,8 +26,8 @@ sudo apt-get update
 sudo apt-get -y dist-upgrade
 echo "$USER ALL=NOPASSWD:$(which rsync)" | sudo tee --append /etc/sudoers
 sudo apt-get install -y build-essential cmake unzip pkg-config gfortran
-sudo apt-get build-dep -y qt5-qmake libqt5gui5 libqt5webengine-data libqt5webkit5 libudev-dev libinput-dev libts-dev libxcb-xinerama0-dev libxcb-xinerama0 gdbserver libdrm-dev
-sudo apt-get install -y libxcb-randr0-dev libxcb-xtest0-dev libxcb-shape0-dev libxcb-xkb-dev
+sudo apt-get build-dep -y qt5-qmake libqt5gui5 libqt5webengine-data libqt5webkit5 libudev-dev libinput-dev libts-dev libxcb-xinerama0-dev libxcb-xinerama0 gdbserver
+sudo apt-get install -y libxcb-randr0-dev libxcb-xtest0-dev libxcb-shape0-dev libxcb-xkb-dev libdrm-dev
 
 # install additional packages
 cecho "YELLOW" "Install additional packages"

@@ -20,7 +20,7 @@ cecho(){
 }
 
 # variables
-raspberry_ip="p1.local"
+raspberry_ip="pi5.local"
 raspberry_user="pi"
 raspberry_pwd="pi"
 
@@ -93,9 +93,9 @@ cecho "YELLOW" "Patching Qt source"
 #cp -R ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/mkspecs/linux-aarch64-gnu-g++ ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/mkspecs/linux-arm-gnueabihf-g++
 #sed -i -e 's/arm-linux-gnueabi-/arm-linux-gnueabihf-/g' ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/mkspecs/linux-arm-gnueabihf-g++/qmake.conf
 #uncomment this if for 64-bit cross-compilation
-if [ ! -d ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/mkspec/devices/linux-rasp-pi4-aarch64 ]
+if [ ! -d ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/mkspecs/devices/linux-rasp-pi4-aarch64 ]
 then
-    sudo cp linux-rasp-pi4-aarch64 ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/mkspec/devices/linux-rasp-pi4-aarch64
+    sudo cp linux-rasp-pi4-aarch64 ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/mkspecs/devices/linux-rasp-pi4-aarch64
 fi
 sed -i -e 's/\"main\"\: \"vc_dispmanx_display_open(0)\;\"/\"main\"\: \[\"vc_dispmanx_display_open(0)\;\"\, \"EGL_DISPMANX_WINDOW_T \*eglWindow \= new EGL_DISPMANX_WINDOW_T\;\"\]/g' ~/rpi-qt/qt-everywhere-src-5.15.8/qtbase/src/gui/configure.json
 echo
