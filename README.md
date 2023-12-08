@@ -27,6 +27,7 @@ This section assume you have at least 10GB SDcard or USB stick for installing Ra
 ### 1.1. DOWNLOAD SOFTWARES & PREPARE THE USB or SD CARD
 Install rpi-imager<br>
 >sudo apt install rpi-imager<br>
+>rpi-imager<br>
 
 Select 64-bit Raspberry Pi OS Bookworm Lite/Desktop. Adjust settings form the gear button. For target storage select USB stick or sd card. I used USB since its much faster than sdcard. <br>
 
