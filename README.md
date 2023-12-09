@@ -133,6 +133,9 @@ Current workaround is to install qt5 with apt-get and then copy 2 files from its
 >pi@pi5:/usr/lib/aarch64-linux-gnu/qt5/plugins/egldeviceintegrations $ sudo cp libqeglfs-kms-integration.so /usr/local/qt5.15/plugins/egldeviceintegrations/libqeglfs-kms-integration.so<br>
 >pi@pi5:/usr/lib/aarch64-linux-gnu/qt5/plugins/egldeviceintegrations $ sudo cp libqeglfs-x11-integration.so /usr/local/qt5.15/plugins/egldeviceintegrations/libqeglfs-x11-integration.so<br>
 
+Then there should be 4 files in /usr/local/qt5.15/plugins/egldeviceintegrations/ folder:<br>
+> libqeglfs-emu-integration.so  libqeglfs-kms-egldevice-integration.so  libqeglfs-kms-integration.so  libqeglfs-x11-integration.so
+
 ## Cannot create window: no screens available ##
 drmModeGetResources failed (Operation not supported)<br>
 no screens available, assuming 24-bit color<br>
