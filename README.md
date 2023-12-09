@@ -147,12 +147,12 @@ insert into it<br>
 save file<br>
 
 now before starting your app add a variable before your app name in terminal<br>
-QT_QPA_EGLFS_KMS_CONFIG=/home/YOURUSERNAME/eglfs.json /usr/local/bin/YOURAPP<br>
+>QT_QPA_EGLFS_KMS_CONFIG=/home/YOURUSERNAME/eglfs.json /path/to/YOURAPP<br>
 
 or<br>
 
 put the variable at the beginning of your apps main method<br>
->int main(int argc, char *argv[]){
+>int main(int argc, char *argv[]){<br>
 >  qputenv("QT_QPA_EGLFS_KMS_CONFIG", QByteArray("/home/pi/eglfs.json"));<br>
 > ...<br>
 > }<br>
