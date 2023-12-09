@@ -118,6 +118,17 @@ ERROR: Feature 'kms' was enabled, but the pre-condition 'libs.drm' failed. The .
 
 Also if the libdrm.so file is not located in the ~/rpi-qt/sysroot/usr/lib/aarch64-linux-gnu then might need to specify that also with -L tag in the configure script
 
+## Could not initalize EGL display ##
+Current workaround is to install qt5 with apt-get and then copy 2 files from its installation folder to the qt5.15 folder that was cross-compiled in your pc:<br>
+>pi@pi5:/usr/lib/aarch64-linux-gnu/qt5/plugins/egldeviceintegrations $ sudo cp libqeglfs-kms-integration.so /usr/local/qt5.15/plugins/egldeviceintegrations/libqeglfs-kms-integration.so<br>
+>pi@pi5:/usr/lib/aarch64-linux-gnu/qt5/plugins/egldeviceintegrations $ sudo cp libqeglfs-x11-integration.so /usr/local/qt5.15/plugins/egldeviceintegrations/libqeglfs-x11-integration.so<br>
+
+## Cannot create window: no screens available ##
+drmModeGetResources failed (Operation not supported)<br>
+no screens available, assuming 24-bit color<br>
+
+no fix for this yet<br>
+
 ## FINAL STEP FOR TARGET MACHINE (RASPBERRY PI)
 ### UPDATE LINKER ON RASPBERRY PI
 Enter the following command to update the device letting the linker to find the new QT binary files:<br>
