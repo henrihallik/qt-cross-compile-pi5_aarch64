@@ -172,5 +172,5 @@ It seems that libcamera wants to use wait( GLIBCXX_3.4.30 method from but the cr
 
 a more detailed solution here https://forum.arducam.com/t/error-undefined-reference-to-libcamera-generateconfiguration-when-cross-compiling/5698/8?u=henri<br>
 
-
+Will automate this also later
 
