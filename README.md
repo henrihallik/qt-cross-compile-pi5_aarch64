@@ -160,5 +160,15 @@ put the variable at the beginning of your apps main method<br>
 > ...<br>
 > }<br>
 
+# undefined reference to `std::condition_variable::wait(std::unique_lock<std::mutex>&)@GLIBCXX_3.4.30'
+# undefined reference to `std::__exception_ptr::exception_ptr::_M_release()@CXXABI_1.3.13'
+
+It seems that libcamera wants to use wait( GLIBCXX_3.4.30 method from but the cross-compiler im using has older libstc++ version thats GLIBCXX_3.4.11<br>
+1. Delete all the files that start with libstc++ from the folder ~/rpi-qt/tools/cross-pi-gcc-10.3.0-64/aarch64-linux-gnu/lib64<br>
+2. Copy contents of the qt-cross-compile-pi5_aarch64/lib64 to ~/rpi-qt/tools/cross-pi-gcc-10.3.0-64/aarch64-linux-gnu/lib64<br>
+
+a more detailed solution here https://forum.arducam.com/t/error-undefined-reference-to-libcamera-generateconfiguration-when-cross-compiling/5698/8?u=henri<br>
+
+
 I will later look into automatic these fixes in the scripts. Probably will need to add -x11 and maybe something else to the ./configure parameters
 
