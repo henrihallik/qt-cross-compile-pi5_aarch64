@@ -185,6 +185,8 @@ pi@pi5:~ $ find / -type f -name '*libstdc++*' 2>/dev/null<br>
 /usr/share/gdb/auto-load/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30-gdb.py<br>
 <br>
 
+finally create the symlinks: <br>
+cd ~/rpi-qt/tools/cross-pi-gcc-10.3.0-64/aarch64-linux-gnu/lib64
 ln -s libstdc++.so.6.0.30 libstdc++.so<br>
 ln -s libstdc++.so.6.0.30 libstdc++.so.6<br>
 
