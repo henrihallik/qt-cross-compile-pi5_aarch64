@@ -186,7 +186,7 @@ pi@pi5:~ $ find / -type f -name '*libstdc++*' 2>/dev/null<br>
 <br>
 
 ln -s libstdc++.so.6.0.30 libstdc++.so<br>
-ln -s libstdc++.so.6 libstdc++.so<br>
+ln -s libstdc++.so.6.0.30 libstdc++.so.6<br>
 
 Will automate this also later<br>
 
