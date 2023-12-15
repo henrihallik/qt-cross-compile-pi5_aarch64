@@ -184,5 +184,9 @@ pi@pi5:~ $ find / -type f -name '*libstdc++*' 2>/dev/null<br>
 /usr/share/doc/gcc-12-base/C++/libstdc++_symbols.txt.arm64<br>
 /usr/share/gdb/auto-load/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30-gdb.py<br>
 <br>
+
+ln -s libstdc++.so.6.0.30 libstdc++.so<br>
+ln -s libstdc++.so.6 libstdc++.so<br>
+
 Will automate this also later<br>
 
