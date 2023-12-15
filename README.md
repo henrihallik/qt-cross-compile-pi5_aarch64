@@ -174,11 +174,11 @@ a more detailed solution here https://forum.arducam.com/t/error-undefined-refere
 
 OR<br>
 
-find the same files from your Raspberry Pi filesystem and use those instead. also need to make two symlinks manually in this case<br>
+find the same files(libstdc++.so.6.0.30, libstdc++fs.a, libstdc++fs.a, libstdc++.so.6.0.30-gdb.py) from your Raspberry Pi filesystem and use those instead. also need to make two symlinks manually in this case<br>
 pi@pi5:~ $ find / -type f -name '*libstdc++*' 2>/dev/null<br>
 /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30<br>
 /usr/lib/gcc/aarch64-linux-gnu/12/libstdc++.a<br>
-/usr/lib/gcc/aarch64-linux-gnu/12/libstdc++fs.a
+/usr/lib/gcc/aarch64-linux-gnu/12/libstdc++fs.a<br>
 /usr/share/doc/gcc-12-base/C++/changelog.libstdc++.gz<br>
 /usr/share/doc/gcc-12-base/C++/README.libstdc++-baseline.arm64<br>
 /usr/share/doc/gcc-12-base/C++/libstdc++_symbols.txt.arm64<br>
