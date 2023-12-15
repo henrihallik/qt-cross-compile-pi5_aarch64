@@ -172,5 +172,17 @@ It seems that libcamera wants to use wait( GLIBCXX_3.4.30 method from but the cr
 
 a more detailed solution here https://forum.arducam.com/t/error-undefined-reference-to-libcamera-generateconfiguration-when-cross-compiling/5698/8?u=henri<br>
 
-Will automate this also later
+OR<br>
+
+find the same files from your Raspberry Pi filesystem and use those instead. also need to make two symlinks manually in this case<br>
+pi@pi5:~ $ find / -type f -name '*libstdc++*' 2>/dev/null<br>
+/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30<br>
+/usr/lib/gcc/aarch64-linux-gnu/12/libstdc++.a<br>
+/usr/lib/gcc/aarch64-linux-gnu/12/libstdc++fs.a
+/usr/share/doc/gcc-12-base/C++/changelog.libstdc++.gz<br>
+/usr/share/doc/gcc-12-base/C++/README.libstdc++-baseline.arm64<br>
+/usr/share/doc/gcc-12-base/C++/libstdc++_symbols.txt.arm64<br>
+/usr/share/gdb/auto-load/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30-gdb.py<br>
+<br>
+Will automate this also later<br>
 
